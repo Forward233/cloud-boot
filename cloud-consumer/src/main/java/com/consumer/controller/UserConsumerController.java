@@ -1,6 +1,6 @@
 package com.consumer.controller;
 
-import com.api.model.User;
+import com.common.model.User;
 import com.consumer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,13 +14,13 @@ import java.util.Map;
  * Description: write some description
  */
 @RestController
-public class UserController {
+public class UserConsumerController {
 
     @Autowired
     private UserService userService;
 
     @RequestMapping("/test")
-    public Map test() {
+    public Map<Object,Object> test() {
         return userService.test("张三");
     }
 

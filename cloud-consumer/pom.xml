@@ -21,7 +21,7 @@
 
         <dependency>
             <groupId>com.test</groupId>
-            <artifactId>cloud-api</artifactId>
+            <artifactId>cloud-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

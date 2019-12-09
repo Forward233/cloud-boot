@@ -2,9 +2,9 @@ spring:
   application:
     name: cloud-consumer
   cloud:
-      nacos:
-        discovery:
-          server-addr: 192.168.9.198:8848
-        config:
-          server-addr: ${spring.cloud.nacos.discovery.server-addr}
-          file-extension: yaml
+    nacos:
+      discovery:
+        server-addr: 192.168.31.217:8848
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml

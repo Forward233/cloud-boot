@@ -1,5 +1,6 @@
 package com.consumer.service;
 
+import com.common.service.IUserService;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
@@ -9,5 +10,5 @@ import org.springframework.cloud.openfeign.FeignClient;
  */
 // 服务提供方spring.application.name
 @FeignClient(name ="cloud-service")
-public interface UserService extends com.api.service.UserService {
+public interface UserService extends IUserService {
 }
