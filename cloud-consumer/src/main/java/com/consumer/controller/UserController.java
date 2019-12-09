@@ -28,4 +28,9 @@ public class UserController {
     public User testObj() {
         return userService.testObj(new User());
     }
+
+    @RequestMapping("/testNacosDynamicProp")
+    public String testNacosDynamicProp() {
+        return userService.testNacosDynamicProp();
+    }
 }

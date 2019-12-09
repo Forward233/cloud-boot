@@ -3,22 +3,32 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.test</groupId>
-	<artifactId>cloud</artifactId>
+	<artifactId>cloud-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cloud</name>
+	<name>cloud-test</name>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>cloud-service</module>
+		<module>cloud-service1</module>
+		<module>cloud-service2</module>
 		<module>cloud-consumer</module>
+		<module>cloud-common</module>
 	</modules>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+	<properties>
+		<java.version>1.8</java.version>
+		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+		<spring-cloud-alibaba.version>0.9.0.RELEASE</spring-cloud-alibaba.version>
+		<spring-boot-starter-parent.version>2.2.2.RELEASE</spring-boot-starter-parent.version>
+	</properties>
+
+
+<!--	<parent>-->
+<!--		<groupId>org.springframework.boot</groupId>-->
+<!--		<artifactId>spring-boot-starter-parent</artifactId>-->
+<!--		<version>2.2.2.RELEASE</version>-->
+<!--		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+<!--	</parent>-->
 
 	<dependencyManagement>
 		<dependencies>
@@ -36,16 +46,19 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>${spring-boot-starter-parent.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-		<spring-cloud-alibaba.version>0.9.0.RELEASE</spring-cloud-alibaba.version>
-	</properties>
 
 	<dependencies>
+
 		<!--// 服务发现(注册中心)-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -79,14 +92,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

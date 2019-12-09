@@ -1,16 +1,14 @@
-package com.consumer;
+package com.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients//开启feign
-public class ConsumerApplication {
+public class ServiceApplication1 {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(ServiceApplication1.class, args);
     }
 
 }
