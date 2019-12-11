@@ -23,6 +23,11 @@ public class UserServiceProvider {
 
     @RequestMapping("/testOut")
     public Map test(@RequestParam("name") String name, HttpServletRequest req) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Map<Object, Object> map = new HashMap<>();
         map.put("url", req.getRequestURL().toString());
         map.put("name", name);

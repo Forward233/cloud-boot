@@ -1,6 +1,7 @@
 package com.consumer.service;
 
 import com.common.service.IUserService;
+import com.consumer.controller.FallBackMethod;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
@@ -9,6 +10,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  * Description: write some description
  */
 // 服务提供方spring.application.name
-@FeignClient(name ="cloud-service")
+@FeignClient(name = "cloud-service", fallback = FallBackMethod.class)
 public interface UserService extends IUserService {
 }

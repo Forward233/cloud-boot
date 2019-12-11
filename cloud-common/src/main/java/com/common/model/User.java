@@ -1,6 +1,9 @@
 package com.common.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Author: yhl
@@ -8,6 +11,9 @@ import lombok.Data;
  * Description: write some description
  */
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     private Long id;
     private String name;

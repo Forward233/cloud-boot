@@ -4,3 +4,12 @@ server:
 cloud-service:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+logging:
+  level:
+    com.consumer: debug
+#feign:
+#  hystrix:
+#    enabled: true
+feign:
+  httpclient:
+    connection-timeout: 10000
