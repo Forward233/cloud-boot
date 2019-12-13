@@ -7,9 +7,24 @@ cloud-service:
 logging:
   level:
     com.consumer: debug
-#feign:
-#  hystrix:
-#    enabled: true
 feign:
-  httpclient:
-    connection-timeout: 10000
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        # 默认1000
+        readTimeout: 4000
+#        loggerLevel: NONE
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:  #default全局有效，service id指定应用有效
+      execution:
+#        timeout:
+#          #是否开启超时熔断
+#          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000 #断路器超时时间，默认1000ms

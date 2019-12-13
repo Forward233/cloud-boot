@@ -24,7 +24,7 @@ public class UserServiceProvider {
     @RequestMapping("/testOut")
     public Map test(@RequestParam("name") String name, HttpServletRequest req) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

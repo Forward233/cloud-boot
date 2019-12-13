@@ -20,8 +20,8 @@ public class UserConsumerController {
     private UserService userService;
 
     @RequestMapping("/test")
-    public Map<Object,Object> test() {
-        return userService.test("张三");
+    public Map<Object,Object> test(String name) {
+        return userService.test(name);
     }
 
     @RequestMapping("/testObj")
