@@ -1,0 +1,30 @@
+server:
+  port: 8080
+# \u8BBE\u7F6E\u5BF9\u670D\u52A1\u63D0\u4F9B\u8005\u7684\u8D1F\u8F7D\u5747\u8861\u7B56\u7565
+cloud-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+logging:
+  level:
+    com.consumer: debug
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        # 默认1000
+        readTimeout: 4000
+#        loggerLevel: NONE
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:  #default全局有效，service id指定应用有效
+      execution:
+#        timeout:
+#          #是否开启超时熔断
+#          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000 #断路器超时时间，默认1000ms

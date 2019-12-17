@@ -1,8 +1,6 @@
 package com.service.controller;
 
 import com.common.model.User;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,11 +16,16 @@ import java.util.Map;
  * Description: write some description
  */
 @RestController
-@RefreshScope
 public class UserServiceProvider {
 
+
     @RequestMapping("/testOut")
-    public Map test(@RequestParam("name") String name, HttpServletRequest req) {
+    public Map<Object,Object> test(@RequestParam("name") String name, HttpServletRequest req) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Map<Object, Object> map = new HashMap<>();
         map.put("url", req.getRequestURL().toString());
         map.put("name", name);
@@ -31,15 +34,7 @@ public class UserServiceProvider {
 
     @RequestMapping("/testOutObj")
     public User testObj(@RequestBody() User user, HttpServletRequest req) {
-        user.setUrl(req.getRequestURL().toString()+"&vsersion=2");
+        user.setUrl(req.getRequestURL().toString());
         return user;
-    }
-
-    @Value("${testName:is null}")
-    private String name;
-
-    @RequestMapping("/testNacosDynamicProp")
-    public String  testNacosDynamicProp() {
-        return name+",service=2";
     }
 }

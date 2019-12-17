@@ -10,6 +10,7 @@
 
 	<!--子模块-->
 	<modules>
+		<module>cloud-gateway</module>
 		<module>cloud-service1</module>
 		<module>cloud-service2</module>
 		<module>cloud-consumer</module>
