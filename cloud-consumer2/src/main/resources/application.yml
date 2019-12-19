@@ -1,6 +1,6 @@
 server:
-  port: 8085
-
+  port: 9001
+# \u8BBE\u7F6E\u5BF9\u670D\u52A1\u63D0\u4F9B\u8005\u7684\u8D1F\u8F7D\u5747\u8861\u7B56\u7565
 cloud-service:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
@@ -28,3 +28,12 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 4000 #断路器超时时间，默认1000ms
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: cloud-gateway
+          uri: lb://cloud-consumer
+          predicates:
+            - Path=/**

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Author: yhl
  * DateTime: 2019/12/17 22:31
- * Description: write some description
+ * Description: 配置文件测试
  */
 @RestController
 //@RefreshScope  // 搭配@Value，动态刷新自定义配置文件参数，此注解必须加
