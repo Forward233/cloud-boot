@@ -1,4 +1,7 @@
 #服务端口
 server:
   port: 8081
-testName: hehe
+#person:
+#  name: yhl
+#  gender: male
+#  age: 18

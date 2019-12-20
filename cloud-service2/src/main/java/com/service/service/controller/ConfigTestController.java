@@ -1,4 +1,4 @@
-package com.service.controller;
+package com.service.service.controller;
 
 import com.service.config.PersonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
