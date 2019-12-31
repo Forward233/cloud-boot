@@ -30,10 +30,9 @@ hystrix:
             timeoutInMilliseconds: 4000 #断路器超时时间，默认1000ms
 
 spring:
-  cloud:
-    gateway:
-      routes:
-        - id: cloud-gateway
-          uri: lb://cloud-consumer
-          predicates:
-            - Path=/**
+  zipkin:
+    base-url: http://192.168.9.198:9411/zipkin/
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      probability: 1

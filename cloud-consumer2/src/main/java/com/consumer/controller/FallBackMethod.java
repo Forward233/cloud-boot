@@ -1,7 +1,7 @@
-package com.gateway.controller;
+package com.consumer.controller;
 
 import com.common.model.User;
-import com.gateway.service.UserService;
+import com.consumer.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

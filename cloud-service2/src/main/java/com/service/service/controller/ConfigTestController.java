@@ -1,6 +1,6 @@
 package com.service.service.controller;
 
-import com.service.config.PersonConfig;
+import com.service.service.config.PersonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;

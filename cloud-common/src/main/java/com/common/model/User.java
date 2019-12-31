@@ -18,4 +18,6 @@ public class User {
     private Long id;
     private String name;
     private String url;
+    private String service;
+    private String consumer;
 }

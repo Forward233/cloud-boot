@@ -1,7 +1,7 @@
-package com.gateway.controller;
+package com.consumer.controller;
 
 import com.common.model.User;
-import com.gateway.service.UserService;
+import com.consumer.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

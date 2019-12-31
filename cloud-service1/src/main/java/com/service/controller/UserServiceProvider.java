@@ -21,20 +21,22 @@ public class UserServiceProvider {
 
     @RequestMapping("/testOut")
     public Map<Object,Object> test(@RequestParam("name") String name, HttpServletRequest req) {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         Map<Object, Object> map = new HashMap<>();
         map.put("url", req.getRequestURL().toString());
         map.put("name", name);
+        map.put("service port",req.getServerPort());
         return map;
     }
 
     @RequestMapping("/testOutObj")
     public User testObj(@RequestBody() User user, HttpServletRequest req) {
         user.setUrl(req.getRequestURL().toString());
+        user.setService("service" + req.getServerPort());
         return user;
     }
 }

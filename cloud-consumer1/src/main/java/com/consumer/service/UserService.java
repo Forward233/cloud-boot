@@ -1,7 +1,7 @@
-package com.gateway.service;
+package com.consumer.service;
 
 import com.common.service.IUserService;
-import com.gateway.controller.FallBackMethod;
+import com.consumer.controller.FallBackMethod;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**

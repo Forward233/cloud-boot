@@ -1,4 +1,4 @@
-package com.gateway.config;
+package com.consumer.config;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.nacos.api.NacosFactory;
@@ -22,7 +22,7 @@ import java.util.concurrent.Executor;
 /**
  * Author: yhl
  * DateTime: 2019/12/18 22:48
- * Description: write some description
+ * Description:
  */
 public class NacosDynamicRouteService implements ApplicationEventPublisherAware {
 
