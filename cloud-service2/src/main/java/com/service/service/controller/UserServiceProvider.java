@@ -1,6 +1,6 @@
 package com.service.service.controller;
 
-import com.common.model.User;
+import com.api.model.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +20,7 @@ public class UserServiceProvider {
 
 
     @RequestMapping("/testOut")
-    public Map<Object,Object> test(@RequestParam("name") String name, HttpServletRequest req) {
+    public Map<Object, Object> test(@RequestParam("name") String name, HttpServletRequest req) {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

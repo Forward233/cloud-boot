@@ -1,38 +1,38 @@
 server:
-  port: 8080
+ port: 8080
 cloud-service:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+ ribbon:
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 logging:
-  level:
-    com.consumer: INFO
-    com.alibaba.nacos.client.naming: error
+ level:
+  com.consumer: INFO
+  com.alibaba.nacos.client.naming: error
 feign:
-  client:
-    config:
-      default:
-        connectTimeout: 5000
-        # 默认1000
-        readTimeout: 4000
-#        loggerLevel: NONE
-  hystrix:
-    enabled: true
+ client:
+  config:
+   default:
+    connectTimeout: 5000
+    # 默认1000
+    readTimeout: 4000
+ #        loggerLevel: NONE
+ hystrix:
+  enabled: true
 
 hystrix:
-  command:
-    default:  #default全局有效，service id指定应用有效
-      execution:
-#        timeout:
-#          #是否开启超时熔断
-#          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 4000 #断路器超时时间，默认1000ms
+ command:
+  default:  #default全局有效，service id指定应用有效
+   execution:
+    #        timeout:
+    #          #是否开启超时熔断
+    #          enabled: true
+    isolation:
+     thread:
+      timeoutInMilliseconds: 4000 #断路器超时时间，默认1000ms
 
 spring:
-  zipkin:
-    base-url: http://192.168.9.198:9411/
-    discovery-client-enabled: false
-  sleuth:
-    sampler:
-      probability: 1
+ zipkin:
+  base-url: http://192.168.9.198:9411/
+  discovery-client-enabled: false
+ sleuth:
+  sampler:
+   probability: 1

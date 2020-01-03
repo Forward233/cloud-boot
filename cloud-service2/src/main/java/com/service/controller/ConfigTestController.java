@@ -27,7 +27,7 @@ public class ConfigTestController {
     private Environment applicationContext;
 
     @RequestMapping("/testNacosDynamicProp")
-    public String  testNacosDynamicProp() {
+    public String testNacosDynamicProp() {
         String name = applicationContext.getProperty("testName");
         return this.name + "  " + name + ",service=1";
     }
