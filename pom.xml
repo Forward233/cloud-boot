@@ -16,6 +16,7 @@
         <module>cloud-service2</module>
         <module>cloud-consumer1</module>
         <module>cloud-consumer2</module>
+        <module>cloud-common</module>
         <module>cloud-api</module>
         <module>cloud-admin</module>
         <module>cloud-zipkin</module>

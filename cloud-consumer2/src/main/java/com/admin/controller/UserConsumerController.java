@@ -1,12 +1,13 @@
 package com.admin.controller;
 
 import com.admin.service.UserService;
-import com.api.model.User;
+import com.zipkin.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
@@ -21,19 +22,22 @@ public class UserConsumerController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/test")
-    public Map<Object, Object> test(String name) {
-        log.info("-----------------------consumer 2");
-        return userService.test(name);
+    @RequestMapping("/testOut")
+    public Map<Object, Object> test(String name, HttpServletRequest request) {
+        final Map<Object, Object> testMap = userService.test(name);
+        testMap.put("consumer port", request.getServerPort());
+        return testMap;
     }
 
-    @RequestMapping("/testObj")
-    public User testObj() {
-        return userService.testObj(new User());
+    @RequestMapping("/testOutObj")
+    public User testObj(HttpServletRequest request) {
+        final User user = userService.testObj(new User());
+        user.setConsumer("consumer" + request.getServerPort());
+        return user;
     }
 
     @RequestMapping("/testNacosDynamicProp")
-    public String testNacosDynamicProp() {
+    public String testNacosDynamicProp(HttpServletRequest request) {
         return userService.testNacosDynamicProp();
     }
 }

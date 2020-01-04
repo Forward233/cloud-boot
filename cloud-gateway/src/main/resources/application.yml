@@ -1,43 +1,43 @@
 server:
  port: 8085
 
-cloud-service:
+cloud-consumer:
  ribbon:
   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 logging:
  level:
   com.alibaba.nacos.client.naming: error
-feign:
- client:
-  config:
-   default:
-    connectTimeout: 5000
-    # 默认1000
-    readTimeout: 4000
- #        loggerLevel: NONE
- hystrix:
-  enabled: true
+
+#熔断器配置
 
 hystrix:
  command:
-  default:  #default全局有效，service id指定应用有效
+  default:
    execution:
-    #        timeout:
-    #          #是否开启超时熔断
-    #          enabled: true
     isolation:
      thread:
-      timeoutInMilliseconds: 4000 #断路器超时时间，默认1000ms
+      #设置API网关中路由转发请求的HystrixCommand执行超时时间
+      timeoutInMilliseconds: 1
+
 spring:
  cloud:
   gateway:
+   default-filters:
    routes:
     - id: cloud-consumer
       uri: lb://cloud-consumer
       predicates:
-       - Path=/**
+       - Path=/**/**
+      filters:
+#       开启熔断，返回失败信息
+#       - Hystrix=myCommandName
+       # 熔断后进行处理
+       - name: Hystrix
+         args:
+          name: failTestOut
+          fallbackUri: forward:/testOutFail
  zipkin:
-  base-url: http://192.168.9.198:9411/
+  base-url: http://192.168.31.217:9411/
   discovery-client-enabled: false
  sleuth:
   sampler:

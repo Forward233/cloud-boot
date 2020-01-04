@@ -1,3 +1,20 @@
+#服务端口
 server:
- port: 8082
-testName: test
+ port: 9001
+person:
+  name: yhl
+  gender: male
+  age: 18
+
+logging:
+ level:
+  com.service: INFO
+  com.alibaba.nacos.client.naming: error
+
+spring:
+ zipkin:
+  base-url: http://192.168.31.217:9411/
+  discovery-client-enabled: false
+ sleuth:
+  sampler:
+   probability: 1

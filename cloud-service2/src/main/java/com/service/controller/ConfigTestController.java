@@ -1,5 +1,6 @@
 package com.service.controller;
 
+import com.service.config.PersonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -9,11 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Author: yhl
  * DateTime: 2019/12/17 22:31
- * Description: write some description
+ * Description: 配置文件测试
  */
 @RestController
 //@RefreshScope  // 搭配@Value，动态刷新自定义配置文件参数，此注解必须加
 public class ConfigTestController {
+
+    // 使用@ConfigurationProperties不需要加@RefreshScope注解，修改nacos中配置，自动刷新。
+    @Autowired
+    private PersonConfig personConfig;
 
     @Value("${testName:is null}")
     private String name;
@@ -30,5 +35,10 @@ public class ConfigTestController {
     public String testNacosDynamicProp() {
         String name = applicationContext.getProperty("testName");
         return this.name + "  " + name + ",service=1";
+    }
+
+    @RequestMapping("/testConf")
+    public void testConfig() {
+        System.out.println(personConfig);
     }
 }

@@ -1,7 +1,7 @@
 package com.admin.controller;
 
 import com.admin.service.UserService;
-import com.api.model.User;
+import com.zipkin.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

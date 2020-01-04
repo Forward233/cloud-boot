@@ -1,7 +1,7 @@
 package com.admin.service;
 
 import com.admin.controller.FallBackMethod;
-import com.api.service.IUserService;
+import com.zipkin.service.IUserService;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**

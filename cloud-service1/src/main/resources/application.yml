@@ -13,7 +13,7 @@ logging:
 
 spring:
  zipkin:
-  base-url: http://192.168.9.198:9411/
+  base-url: http://192.168.31.217:9411/
   discovery-client-enabled: false
  sleuth:
   sampler:
