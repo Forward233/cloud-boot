@@ -14,7 +14,8 @@
         <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E-->
         <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
-        <spring-boot-starter-parent.version>2.1.11.RELEASE</spring-boot-starter-parent.version>
+        <!--匹配版本：2.1.11.RELEASE，暂时不修改，会影响单元测试-->
+        <spring-boot-starter-parent.version>2.2.2.RELEASE</spring-boot-starter-parent.version>
 
         <spring-boot-admin.version>2.1.5</spring-boot-admin.version>
         <fastjson.vsersion>1.2.62</fastjson.vsersion>
