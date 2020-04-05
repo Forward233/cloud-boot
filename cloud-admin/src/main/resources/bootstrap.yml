@@ -1,0 +1,10 @@
+spring:
+ application:
+  name: cloud-admin
+ cloud:
+  nacos:
+   config:
+    file-extension: yaml
+    server-addr: config
+   discovery:
+    server-addr: ${spring.cloud.nacos.config.server-addr}

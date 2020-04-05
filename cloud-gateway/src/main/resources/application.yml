@@ -9,7 +9,6 @@ logging:
   com.alibaba.nacos.client.naming: error
 
 #熔断器配置
-
 hystrix:
  command:
   default:
@@ -36,9 +35,19 @@ spring:
          args:
           name: failTestOut
           fallbackUri: forward:/testOutFail
+
  zipkin:
-  base-url: http://192.168.31.217:9411/
+  base-url: http://192.168.9.198:9411/
   discovery-client-enabled: false
  sleuth:
   sampler:
    probability: 1
+
+management:
+ endpoints:
+  web:
+   exposure:
+    include: '*'
+  endpoint:
+   health:
+    show-details: ALWAYS

@@ -1,7 +1,7 @@
-package com.admin.controller;
+package com.consumer.controller;
 
-import com.admin.service.UserService;
-import com.zipkin.model.User;
+import com.consumer.service.UserService;
+import com.api.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

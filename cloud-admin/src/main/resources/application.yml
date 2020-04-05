@@ -5,3 +5,11 @@ spring:
   user:
    name: admin
    password: admin
+management:
+ endpoints:
+  web:
+   exposure:
+    include: '*'
+  endpoint:
+   health:
+    show-details: ALWAYS

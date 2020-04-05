@@ -1,4 +1,4 @@
-package com.zipkin.model;
+package com.api.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

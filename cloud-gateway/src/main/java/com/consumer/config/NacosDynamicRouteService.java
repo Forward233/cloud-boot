@@ -1,4 +1,4 @@
-package com.admin.config;
+package com.consumer.config;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.nacos.api.NacosFactory;

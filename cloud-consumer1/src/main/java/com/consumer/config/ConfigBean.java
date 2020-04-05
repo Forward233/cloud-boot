@@ -1,4 +1,4 @@
-package com.admin.config;
+package com.consumer.config;
 
 import feign.Logger;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
