@@ -2,32 +2,32 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>cloud-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-api</name>
-    <packaging>jar</packaging>
-
     <parent>
         <groupId>com.cloud</groupId>
         <artifactId>cloud-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    <artifactId>dubbo-service1</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>dubbo-service1</name>
+    <packaging>jar</packaging>
 
     <dependencies>
+        <!--引入公共api-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.cloud</groupId>
+            <artifactId>cloud-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
+            <groupId>com.cloud</groupId>
+            <artifactId>cloud-zipkin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
+
 
 </project>

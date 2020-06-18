@@ -1,0 +1,24 @@
+spring:
+ application:
+  # 服务提供者名称
+  name: dubbo-consumer
+ cloud:
+  nacos:
+   discovery:
+    # 服务注册于发现地址
+    server-addr: 192.168.150.61:8846,192.168.150.61:8847,192.168.150.61:8848
+   config:
+    # 配置中心地址
+    server-addr: ${NACOS-HOST:house-register}:${NACOS-PORT:8846},${NACOS-HOST:house-register}:${NACOS-PORT:8847},${NACOS-HOST:house-register}:${NACOS-PORT:8848}
+    # 配置中心配置文件的格式，如果不设置此项，默认为.properties格式
+    file-extension: yaml
+
+# dubbo 设置
+dubbo:
+ protocol:
+  name: dubbo
+  port: -1
+ cloud:
+  subscribed-services: dubbo-service
+ consumer:
+  filter: 'tracing'

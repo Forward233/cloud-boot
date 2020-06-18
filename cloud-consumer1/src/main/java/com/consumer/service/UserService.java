@@ -1,7 +1,7 @@
 package com.consumer.service;
 
 import com.consumer.controller.FallBackMethod;
-import com.api.service.IUserService;
+import com.api.service.feign.IUserService;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
