@@ -1,0 +1,8 @@
+#服务端口
+server:
+ port: 7001
+
+logging:
+ level:
+  com.service: INFO
+  com.alibaba.nacos.client.naming: error
