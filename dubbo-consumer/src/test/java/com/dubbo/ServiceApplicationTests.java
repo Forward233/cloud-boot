@@ -1,6 +1,6 @@
 package com.dubbo;
 
-import com.api.service.dubbo.IProductService;
+import com.api.service.IProductService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

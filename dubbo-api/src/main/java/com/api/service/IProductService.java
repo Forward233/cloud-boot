@@ -1,7 +1,6 @@
-package com.api.service.dubbo;
+package com.api.service;
 
 import com.api.model.Product;
-import org.apache.dubbo.config.annotation.Service;
 
 /**
  * @author: yhl

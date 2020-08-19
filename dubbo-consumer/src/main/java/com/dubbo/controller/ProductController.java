@@ -1,7 +1,7 @@
 package com.dubbo.controller;
 
 import com.api.model.Product;
-import com.api.service.dubbo.IProductService;
+import com.api.service.IProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.GetMapping;

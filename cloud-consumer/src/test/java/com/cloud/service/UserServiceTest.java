@@ -1,7 +1,7 @@
 package com.cloud.service;
 
 import com.api.model.User;
-import com.api.service.feign.IUserService;
+import com.api.service.IUserService;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

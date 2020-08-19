@@ -17,7 +17,7 @@
         <!--引入公共api-->
         <dependency>
             <groupId>com.cloud</groupId>
-            <artifactId>cloud-api</artifactId>
+            <artifactId>dubbo-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

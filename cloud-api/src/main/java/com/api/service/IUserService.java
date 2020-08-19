@@ -1,4 +1,4 @@
-package com.api.service.feign;
+package com.api.service;
 
 import com.api.model.User;
 import org.springframework.web.bind.annotation.RequestBody;
