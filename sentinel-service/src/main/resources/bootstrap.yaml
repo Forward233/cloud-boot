@@ -1,0 +1,32 @@
+spring:
+ application:
+  # 服务提供者名称
+  name: dubbo-service
+ main:
+  # Spring Boot 2.1 需要设定
+  allow-bean-definition-overriding: true
+ cloud:
+  nacos:
+   discovery:
+    # 服务注册于发现地址
+    server-addr: 192.168.150.61:8846,192.168.150.61:8847,192.168.150.61:8848
+   config:
+    # 配置中心地址
+    server-addr: ${spring.cloud.nacos.discovery.server-addr}
+    # 配置中心配置文件的格式，如果不设置此项，默认为.properties格式
+    file-extension: yaml
+
+dubbo:
+ scan:
+  base-packages: com.dubbo.service
+ protocol:
+  name: dubbo
+  port: -1
+# 添加此配置报错
+# registry:
+#  address: spring-cloud://localhost
+ cloud:
+  subscribed-services: /
+ provider:
+  timeout: 600000
+#  filter: 'tracing'
