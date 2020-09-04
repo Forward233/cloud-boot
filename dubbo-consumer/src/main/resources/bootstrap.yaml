@@ -20,5 +20,5 @@ dubbo:
   port: -1
  cloud:
   subscribed-services: dubbo-service
- consumer:
-  filter: 'tracing'
+# consumer:
+#  filter: 'tracing'

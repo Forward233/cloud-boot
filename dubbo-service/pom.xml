@@ -21,9 +21,16 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!-- [Springboot+Dubbo使用Zipkin进行接口调用链路追踪 - 轻愁~ - 博客园](https://www.cnblogs.com/whzbz894/p/12660364.html)-->
         <dependency>
             <groupId>com.cloud</groupId>
             <artifactId>cloud-zipkin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cloud</groupId>
+            <artifactId>dubbo-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

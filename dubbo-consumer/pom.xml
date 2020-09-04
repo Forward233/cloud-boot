@@ -26,6 +26,12 @@
             <artifactId>cloud-zipkin</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.cloud</groupId>
+            <artifactId>dubbo-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 
