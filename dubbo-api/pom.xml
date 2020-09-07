@@ -9,7 +9,7 @@
 
     <parent>
         <groupId>com.cloud</groupId>
-        <artifactId>cloud-parent</artifactId>
+        <artifactId>cloud-boot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -19,15 +19,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <optional>true</optional>
         </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>

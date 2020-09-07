@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.api.model.Product;
 import com.api.service.IProductService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 /**
  * @author: yhl
@@ -12,7 +12,7 @@ import org.apache.dubbo.config.annotation.Service;
  * @Description:
  */
 @Slf4j
-@Service
+@DubboService
 public class ProductServiceImp implements IProductService {
 
     @Override
