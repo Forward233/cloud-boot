@@ -13,10 +13,10 @@
         <!--版本说明-->
         <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E-->
         <!--Greenwich.SR4此版本admin报错-->
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
         <!--匹配版本：2.1.11.RELEASE，暂时不修改，会影响单元测试-->
-        <spring-boot-starter-parent.version>2.2.2.RELEASE</spring-boot-starter-parent.version>
+        <spring-boot-starter-parent.version>2.4.0</spring-boot-starter-parent.version>
 
         <spring-boot-admin.version>2.2.1</spring-boot-admin.version>
         <fastjson.vsersion>1.2.62</fastjson.vsersion>
